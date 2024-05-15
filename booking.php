@@ -35,6 +35,12 @@
 	  })
 	$('#manage-book').submit(function(e){
 		e.preventDefault()
+	
+		if (!this.checkValidity()) {
+        alert("Please fill in all required fields.");
+        return false; // Prevent further form submission if invalid
+    }
+	
 		start_load()
 		$('#msg').html('')
 		$.ajax({
