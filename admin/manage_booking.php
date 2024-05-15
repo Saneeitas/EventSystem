@@ -59,6 +59,10 @@ foreach($booking->fetch_array() as $k => $v){
 </div>
 
 <script>
+     $('.datetimepicker').datetimepicker({
+	      format:'Y/m/d H:i',
+	      startDate: '+3d'
+	  })
     $('#manage-book').submit(function(e){
         e.preventDefault()
         start_load()
