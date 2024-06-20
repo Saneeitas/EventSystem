@@ -4,7 +4,7 @@
 <style>
 	input[type=checkbox]
 {
-  /* Double-sized Checkboxes */
+
   -ms-transform: scale(1.5); /* IE */
   -moz-transform: scale(1.5); /* FF */
   -webkit-transform: scale(1.5); /* Safari and Chrome */
