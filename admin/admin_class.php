@@ -10,7 +10,7 @@ Class Action {
     
     $this->db = $conn;
 	}
-	
+
 	function __destruct() {
 	    $this->db->close();
 	    ob_end_flush();
@@ -29,6 +29,7 @@ Class Action {
 			return 3;
 		}
 	}
+
 	function logout(){
 		session_destroy();
 		foreach ($_SESSION as $key => $value) {
@@ -61,12 +62,14 @@ Class Action {
 			return 1;
 		}
 	}
+
 	function delete_user(){
 		extract($_POST);
 		$delete = $this->db->query("DELETE FROM users where id = ".$id);
 		if($delete)
 			return 1;
 	}
+	
 	function signup(){
 		extract($_POST);
 		$data = " name = '$name' ";
